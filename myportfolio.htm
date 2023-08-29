@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portfolio</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		header {
+			background-color: #333;
+			color: white;
+			padding: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		header h1 {
+			margin: 0;
+		}
+		header nav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+		}
+		header nav li {
+			margin-right: 10px;
+		}
+		header nav li a {
+			color: white;
+			text-decoration: none;
+		}
+		main {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+        #image input[type="file"] {
+            display: block;
+            margin-bottom: 20px;
+        }
+        #image img {
+            max-width: 100%;
+            height: auto;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        h2, h3 {
+            margin-bottom: 10px;
+        }
+        ul {
+            margin-top: 0;
+        }
+        #contact p {
+            margin-top: 0;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Lawal Opeyemi Michael</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="image">
+            <h2>Upload Image</h2>
+            <input type="file" accept="image/*">
+            <!-- Image preview -->
+            <img id="preview" src="#" alt="your image" style="display:none;"/>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>As a dynamic and experienced individual with various tactical and problem-solving skills, I am constantly seeking new challenges and opportunities to grow. My versatility, backed by a pool of knowledge and positive impact, allows me to contribute to the required development per time.</p>
+
+            <p>My core competencies include fact-checking, data visualization, speed and accuracy, researching, creativity, arithmetic skill, social media management, and teamwork. These skills have been honed through my experiences as a remote graphic design intern at BenjaminDada.com Tech Blog, where I created graphics designs and content. As a self-employed multimedia artist at LOVISUALS, I have also had the opportunity to work on general media projects.</p>
+
+            <p>In addition to my professional experiences in graphic design and multimedia, I also have experience as a personal assistant (PA). This role has allowed me to further develop my organizational and communication skills while providing support to individuals or teams.</p>
+
+            <p>In addition to my professional experiences, I have also been involved in various extra-curricular and service activities. As the High School Press Club President from 2016-2018, I coordinated and organized drilling activities and brainstorming challenges. I also represented my school in The Spelling Bee Competition in 2017, winning an award for Winner Recognition. In 2022, I was invited to speak with a group of high school students about building an excellent career and shared my personal life model to showcase the theme.</p>
+
+            <p>My education includes an undergraduate degree in English Language and Education (pending), a CIMA Certificate Level (pending), a Senior Secondary Certificate (WASSCE) equivalent to GSCE in June 2018, and a Basic Education Certificate Examination in September 2015.</p>
+
+            <p>In summary, my diverse experiences and skills make me a unique and exceptional individual who is always striving for excellence. Whether it’s through my professional work or my involvement in extra-curricular activities, I am constantly pushing myself to be the best that I can be.</p>
+        </section>
+
+        <section id="resume">
+            <h2>Resume</h2>
+            <ul>
+                <li><strong>Remote Graphic Design Intern:</strong> BenjaminDada.com Tech Blog - Created graphics designs and content.</li>
+                <li><strong>Multimedia Artist:</strong> LOVISUALS - Worked on general media projects.</li>
+                <li><strong>Personal Assistant:</strong> Developed organizational and communication skills while providing support to individuals or teams.</li>
+                <li><strong>High School Press Club President:</strong> Coordinated and organized drilling activities and brainstorming challenges from 2016-2018.</li>
+                <li><strong>The Spelling Bee Competition:</strong> Represented school in 2017 and won an award for Winner Recognition.</li>
+                <li><strong>Guest Speaker:</strong> Invited to speak with a group of high school students about building an excellent career in 2022.</li>
+            </ul>
+            <h3>Education</h3>
+            <ul>
+                <li><strong>Undergraduate Degree:</strong> English Language and Education (pending)</li>
+                <li><strong>CIMA Certificate Level:</strong> (pending)</li>
+                <li><strong>Senior Secondary Certificate:</strong> WASSCE equivalent to GSCE in June 2018</li>
+                <li><strong>Basic Education Certificate Examination:</strong> September 2015</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:mail.lovisuals@gmail.com">mail.lovisuals@gmail.com</a></p>
+            <p>Mobile: +2349153095464, +2348083000771</p>
+        </section>
+    </main>
+
+    <footer>
+        © Lawal Opeyemi Michael
+    </footer>
+
+    <!-- Script to handle image upload and preview -->
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    document.querySelector('#preview').style.display = "block";
+                    document.querySelector('#preview').setAttribute('src', e.target.result);
+                }
+                
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        
+        document.querySelector('input[type="file"]').addEventListener('change', function() {
+            readURL(this);
+        });
+    </script>
+
+</body>
+</html>
